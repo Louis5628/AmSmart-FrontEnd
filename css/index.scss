@@ -1,0 +1,257 @@
+@import "_style_guide.scss";
+
+@mixin desktop {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin notebook {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+body{
+    position: relative;
+}
+
+.mask{
+   
+    &.active{
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background-color: black;
+        
+    }
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+    @include tablet() {
+        display: flex;
+        &.active{
+            background-color: black;
+        }
+    }
+
+    .container {
+        width: 100vw;
+        margin-right: calc(100% - 100vw);
+        padding-right: 17px;
+
+        .logo {
+            background-image: url(/img/logo.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            border-bottom: 1px solid gray;
+
+            @include tablet() {
+                width: 100px;
+                height: 50px;
+                margin: 0;
+                margin-left: 10px;
+                float: left;
+                z-index: -1;
+
+                border-bottom: none;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            padding: 15px 0;
+            width: 50%;
+            margin: auto;
+
+            @include notebook() {
+                width: 70%;
+            }
+
+            @include tablet() {
+                display: none;
+
+                &.active{
+                    position: absolute;
+                    top: 35px;
+                    right: 0px;
+                    z-index: 1;
+                    width: 80%;
+                    background-color: white;
+                }
+                
+                // max-height: 0;
+                // overflow: hidden;
+            }
+
+            .link {
+                display: flex;
+                flex-direction: row;
+
+                @include tablet() {
+                    justify-content: center;
+                    // display: none;
+                    // max-height: 0;
+                    // overflow: hidden;
+                }
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+
+                    .pic {
+                        background-image: url(/img/svg/home.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+
+        .burgermenu {
+            display: none;
+
+            @include tablet() {
+                display: block;
+                position: fixed;
+                top: 15px;
+                right: 0;
+                float: right;
+                // margin-top: 15px;
+            }
+
+            // .links{
+            //     display: none;
+
+            //     @include tablet(){
+            //         z-index: 1;
+            //     }
+
+
+            // }
+
+
+        }
+
+        .active{
+            display: block;
+        }
+
+        // .menu-show {
+        //     .links {
+        //        display: flex;
+        //     }
+        // }
+    }
+}
+
+main {
+   
+    // height: calc(100vh-201px);
+    // height: 1000px;
+
+    // @include tablet(){
+        
+    //     margin-top: 0;
+    // }
+
+    .banner {
+
+        img {
+            margin-top: 181px;
+            width: 100vw;
+            @include tablet(){
+                margin-top: 50px;
+            }
+        }
+    }
+
+    // .banner{
+    //     background-image: url(/img/banner.png);
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    //     background-position: center;
+    //     width: 100vw;
+    //     height:100%;
+    // }
+
+    .container {
+        max-width: 60%;
+        margin: auto;
+
+        @include notebook() {
+            max-width: 90%;
+        }
+
+        .about {
+            padding: 25px 0;
+            // width: 80vw;
+            // height: 500px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .product {
+                width: calc(33% - 25px);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                img {
+                    border: 1px solid gray;
+                    padding: 15px;
+                }
+
+                .name {
+                    font-weight: bold;
+                    padding-top: 10px;
+                }
+
+                .price {
+                    display: flex;
+                    padding-bottom: 20px;
+                    color: red;
+
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmSmart</title>
+    <!-- index css -->
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+
+    <div class="mask">
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="logo"></div>
+
+            <div class="links">
+                <div class="link">
+                    <a href="">
+                        <div class="pic"></div>首頁
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="">關於我們</a>
+                </div>
+                <div class="link">
+                    <a href="">最新消息</a>
+                </div>
+                <div class="link">
+                    <a href="">產品專區</a>
+                </div>
+                <div class="link">
+                    <a href="">聯絡我們</a>
+                </div>
+            </div>
+
+            <a href="" class="burgermenu">
+                <img src="/img/svg/menu.svg" alt="" width="20px">
+            </a>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="banner">
+            <img src="/img/banner.png" alt="">
+        </div>
+
+        <div class="container">
+            <div class="about">
+            </div>
+            <div class="products">
+                <div class="product">
+                    <img src="/img/QCE.png" alt="">
+                    <p class="name">無熔絲斷路器-QCE經濟型(一般卡式)</p>
+                    <div class="price">
+                        <div class="NT">NT$</div>
+                        <div class="num">92</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/img/QCE.png" alt="">
+                    <p class="name">SJ/HJ系列電流可調整型TG-125SJ/3P</p>
+                    <div class="price">
+                        <div class="NT">NT$</div>
+                        <div class="num">92</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/img/QCE.png" alt="">
+                    <p class="name">EUCR-數位式電子式保護電驛</p>
+                    <div class="price">
+                        <div class="NT">NT$</div>
+                        <div class="num">92</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/img/QCE.png" alt="">
+                    <p class="name">3CT比流器-數位式電子式保護電驛
+                    </p>
+                    <div class="price">
+                        <div class="NT">NT$</div>
+                        <div class="num">92</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/img/QCE.png" alt="">
+                    <p class="name">RHU-10/1熱動過載電驛</p>
+                    <div class="price">
+                        <div class="NT">NT$</div>
+                        <div class="num">92</div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/img/QCE.png" alt="">
+                    <p class="name">CU-10/4P-4A-電熱專用電磁接觸器</p>
+                    <div class="price">
+                        <div class="NT">NT$</div>
+                        <div class="num">92</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+
+
+    <!-- <script>
+        var about = document.querySelector('.about')
+
+        function getAbout() {
+            about.innerHTML = ``
+            fetch('/json/about.json').then(function (response) {
+                return response.json();
+                
+            })
+
+            
+        }
+
+    </script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'
+        integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=='
+        crossorigin='anonymous'></script>
+    <script>
+
+        var about = document.querySelector('.about')
+        $.ajax({
+            url: './json/about.json',
+            type: 'get',
+            dataType: 'json',
+            data: {}
+        }).then(function (res) {
+            $('.about').append(res.about)
+            console.log(res)
+        }, function (err) {
+            console.log(err)
+        })
+
+
+
+        $(document).ready(function () {
+            $('.burgermenu').on('click', function (event) {
+                event.preventDefault();
+                $('.links').toggleClass('active');
+            });
+
+        });
+
+        $(document).ready(function () {
+            $('.burgermenu').on('click', function (event) {
+                event.preventDefault();
+                $('.mask').toggleClass('active');
+            });
+
+        });
+
+        // $(document).ready(function () {
+        //     $('.burgermenu').on('click', function (event) {
+        //         event.preventDefault();
+        //         $('nav').toggleClass('active');
+        //     });
+
+        // });
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
