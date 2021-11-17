@@ -113,8 +113,6 @@ nav {
 
 nav .container {
   width: 100vw;
-  margin-right: calc(100% - 100vw);
-  padding-right: 17px;
 }
 
 nav .container .logo {
@@ -233,7 +231,7 @@ nav .container .burger {
 
 main .banner img {
   margin-top: 181px;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -340,7 +338,7 @@ main .container .products .product .price {
     position: fixed;
     top: 0px;
     right: 0px;
-    width: 300px;
+    width: 250px;
     height: 100vh;
     background-color: white;
     z-index: 9999;
@@ -352,14 +350,14 @@ main .container .products .product .price {
   background-image: url(/img/svg/close.svg);
   width: 25px;
   height: 25px;
-  float: right;
-  margin-top: 20px;
-  margin-right: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 }
 
 .burgermenu .close .st0 {
-  fill: grey;
+  fill: gray;
 }
 
 .burgermenu .close:active {
@@ -384,7 +382,15 @@ main .container .products .product .price {
 }
 
 .burgermenu .links .link {
+  position: relative;
+  width: 100%;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .burgermenu .links .link:first-child {
@@ -398,8 +404,19 @@ main .container .products .product .price {
   margin-top: 60px;
 }
 
+.burgermenu .links .link::after {
+  content: "";
+  background-color: #cdcdcd;
+  height: 0.5px;
+  width: 80%;
+  position: absolute;
+  top: 160%;
+  left: 10%;
+}
+
 .burgermenu .links .link a {
   text-decoration: none;
+  font-weight: bold;
 }
 
 .mask.active {
@@ -410,7 +427,7 @@ main .container .products .product .price {
   height: 100%;
   z-index: 1;
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .active {

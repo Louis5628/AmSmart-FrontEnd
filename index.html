@@ -57,7 +57,7 @@
                     <div class="pic">
                         <img src="/img/QCE.png" alt="">
                     </div>
-                   
+
                     <p class="name">無熔絲斷路器-QCE經濟型(一般卡式)</p>
                     <div class="price">
                         <div class="NT">NT$</div>
@@ -69,7 +69,7 @@
                     <div class="pic">
                         <img src="/img/SJ_HJ-TG-125SJ.png" alt="">
                     </div>
-                    
+
                     <p class="name">SJ/HJ系列電流可調整型TG-125SJ/3P</p>
                     <div class="price">
                         <div class="NT">NT$</div>
@@ -81,7 +81,7 @@
                     <div class="pic">
                         <img src="/img/EUCR.png" alt="">
                     </div>
-                   
+
                     <p class="name">EUCR-數位式電子式保護電驛</p>
                     <div class="price">
                         <div class="NT">NT$</div>
@@ -92,7 +92,7 @@
                     <div class="pic">
                         <img src="/img/3CT.png" alt="">
                     </div>
-                    
+
                     <p class="name">3CT比流器-數位式電子式保護電驛
                     </p>
                     <div class="price">
@@ -105,7 +105,7 @@
                     <div class="pic">
                         <img src="/img/RHU-10_1.jpg" alt="">
                     </div>
-                   
+
                     <p class="name">RHU-10/1熱動過載電驛</p>
                     <div class="price">
                         <div class="NT">NT$</div>
@@ -117,7 +117,7 @@
                     <div class="pic">
                         <img src="/img/CU-10_4P.jpg" alt="">
                     </div>
-                   
+
                     <p class="name">CU-10/4P-4A-電熱專用電磁接觸器</p>
                     <div class="price">
                         <div class="NT">NT$</div>
@@ -205,11 +205,14 @@
             dataType: 'json',
             data: {}
         }).then(function (res) {
+            
             $('.about').append(res.about)
+            
             console.log(res)
         }, function (err) {
             console.log(err)
         })
+
 
         $(document).ready(function () {
             $('.burger').on('click', function (event) {
