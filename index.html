@@ -12,8 +12,6 @@
 
 <body>
 
-    <div class="mask">
-    </div>
 
     <nav>
         <div class="container">
@@ -39,7 +37,7 @@
                 </div>
             </div>
 
-            <a href="" class="burgermenu">
+            <a href="" class="burger">
                 <img src="/img/svg/menu.svg" alt="" width="20px">
             </a>
 
@@ -56,7 +54,10 @@
             </div>
             <div class="products">
                 <div class="product">
-                    <img src="/img/QCE.png" alt="">
+                    <div class="pic">
+                        <img src="/img/QCE.png" alt="">
+                    </div>
+                   
                     <p class="name">無熔絲斷路器-QCE經濟型(一般卡式)</p>
                     <div class="price">
                         <div class="NT">NT$</div>
@@ -64,44 +65,63 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/img/QCE.png" alt="">
+
+                    <div class="pic">
+                        <img src="/img/SJ_HJ-TG-125SJ.png" alt="">
+                    </div>
+                    
                     <p class="name">SJ/HJ系列電流可調整型TG-125SJ/3P</p>
                     <div class="price">
                         <div class="NT">NT$</div>
-                        <div class="num">92</div>
+                        <div class="num">2,327</div>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/img/QCE.png" alt="">
+
+                    <div class="pic">
+                        <img src="/img/EUCR.png" alt="">
+                    </div>
+                   
                     <p class="name">EUCR-數位式電子式保護電驛</p>
                     <div class="price">
                         <div class="NT">NT$</div>
-                        <div class="num">92</div>
+                        <div class="num">1,613</div>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/img/QCE.png" alt="">
+                    <div class="pic">
+                        <img src="/img/3CT.png" alt="">
+                    </div>
+                    
                     <p class="name">3CT比流器-數位式電子式保護電驛
                     </p>
                     <div class="price">
                         <div class="NT">NT$</div>
-                        <div class="num">92</div>
+                        <div class="num">710</div>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/img/QCE.png" alt="">
+
+                    <div class="pic">
+                        <img src="/img/RHU-10_1.jpg" alt="">
+                    </div>
+                   
                     <p class="name">RHU-10/1熱動過載電驛</p>
                     <div class="price">
                         <div class="NT">NT$</div>
-                        <div class="num">92</div>
+                        <div class="num">212</div>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/img/QCE.png" alt="">
+
+                    <div class="pic">
+                        <img src="/img/CU-10_4P.jpg" alt="">
+                    </div>
+                   
                     <p class="name">CU-10/4P-4A-電熱專用電磁接觸器</p>
                     <div class="price">
                         <div class="NT">NT$</div>
-                        <div class="num">92</div>
+                        <div class="num">215</div>
                     </div>
                 </div>
 
@@ -112,6 +132,51 @@
 
     <footer></footer>
 
+    <div class="burgermenu">
+        <div class="close">
+            <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 180 180" style="enable-background:new 0 0 180 180;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd;
+                        fill: #515151;
+                    }
+                </style>
+                <path class="st0"
+                    d="M175.7,148.5L117,89.8l58.4-58.3c5.9-6,5.9-15.6,0-21.6L170,4.5c-6-5.9-15.6-5.9-21.6,0L90,62.8L31.6,4.5
+	c-6-6-15.7-6-21.6,0L4.6,9.9c-6,6-6,15.6,0,21.6L63,89.8L4.3,148.5c-5.8,5.8-5.7,15.3,0.1,21c0.1,0.1,0.1,0.1,0.2,0.2l5.4,5.4
+	c6.1,6.1,15.5,6.1,21.3,0.4L90,116.8l58.7,58.7c5.8,5.8,15.1,5.8,21.3-0.4l5.4-5.4C181.5,163.6,181.5,154.3,175.7,148.5z" />
+            </svg>
+            <!-- <img src="/img/svg/close.svg" alt="" width="20px"> -->
+        </div>
+        <div class="links">
+            <div class="link">
+                <div class="pic">
+                    <img src="/img/svg/home.svg" alt="" width="20px">
+                </div>
+                <a href="">
+                    首頁
+                </a>
+            </div>
+            <div class="link">
+                <a href="">關於我們</a>
+            </div>
+            <div class="link">
+                <a href="">最新消息</a>
+            </div>
+            <div class="link">
+                <a href="">產品專區</a>
+            </div>
+            <div class="link">
+                <a href="">聯絡我們</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mask">
+    </div>
 
 
     <!-- <script>
@@ -146,34 +211,24 @@
             console.log(err)
         })
 
-
-
         $(document).ready(function () {
-            $('.burgermenu').on('click', function (event) {
+            $('.burger').on('click', function (event) {
                 event.preventDefault();
-                $('.links').toggleClass('active');
-            });
-
-        });
-
-        $(document).ready(function () {
-            $('.burgermenu').on('click', function (event) {
-                event.preventDefault();
+                $('.burgermenu').toggleClass('active');
                 $('.mask').toggleClass('active');
             });
 
         });
 
-        // $(document).ready(function () {
-        //     $('.burgermenu').on('click', function (event) {
-        //         event.preventDefault();
-        //         $('nav').toggleClass('active');
-        //     });
+        $(document).ready(function () {
+            $('.close').on('click', function (event) {
+                event.preventDefault();
+                $('.burgermenu').toggleClass('active');
+                $('.mask').toggleClass('active');
 
-        // });
+            });
 
-
-
+        });
 
 
     </script>
