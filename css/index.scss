@@ -189,8 +189,25 @@ main {
             padding: 25px 0;
             // width: 80vw;
             // height: 500px;
-        }
 
+            @include tablet(){
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+            }
+
+            @include phone(){
+                display: -webkit-box;
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+        }
+    }
         .products {
             display: flex;
             flex-wrap: wrap;

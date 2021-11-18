@@ -255,6 +255,26 @@ main .container .about {
   padding: 25px 0;
 }
 
+@media (max-width: 768px) {
+  main .container .about {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 320px) {
+  main .container .about {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 main .container .products {
   display: -webkit-box;
   display: -ms-flexbox;

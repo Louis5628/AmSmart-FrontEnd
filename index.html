@@ -199,15 +199,18 @@
     <script>
 
         var about = document.querySelector('.about')
+        // var json = JSON.parse(about);
+        // json.about = json.about.replace(/\n/g, "<br />");
+
         $.ajax({
             url: './json/about.json',
             type: 'get',
             dataType: 'json',
             data: {}
         }).then(function (res) {
-            
+
             $('.about').append(res.about)
-            
+
             console.log(res)
         }, function (err) {
             console.log(err)
