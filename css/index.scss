@@ -204,8 +204,7 @@ main {
                     height: 200px;
                     border: 1px solid gray;
 
-                    img {
-                       
+                    img {                
                         padding: 15px;
                         width: auto;
                         height: auto;
@@ -214,8 +213,6 @@ main {
                         
                     }
                 }
-
-                
 
                 .name {
                     font-weight: bold;
@@ -262,16 +259,12 @@ main {
             fill: gray;
         }
        
-
         &:active{
             .st0{
                 fill: white;
             }
             background-color: rgb(255, 127, 64);
         }
-        
-
-        
     }
 
     .links {
@@ -287,8 +280,6 @@ main {
             display: flex;
             justify-content: center;
           
-
-
             &:first-child {
                 display: flex;
                 flex-direction: row;
